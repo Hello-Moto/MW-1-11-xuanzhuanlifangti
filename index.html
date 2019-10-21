@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap{margin: 100px auto;width: 200px; height: 200px;padding: 200px;border: 2px solid #000;perspective: 500px;}
+        .box{width: 200px;height: 200px;position: relative;transform-style: preserve-3d;transition: 5s;;transform-origin: center center -100px;;}
+        .box > div{width: 200px;height: 200px;position: absolute;color: #fff;font: 700 100px/200px "宋体";text-align: center;opacity: .5;}
+        .box > div:nth-child(1){background: blue;top: -200px;left: 0;transform-origin: center bottom;transform: rotateX(90deg);}
+        .box > div:nth-child(2){background: purple;top: 0;left: -200px;transform-origin: right center;transform: rotateY(-90deg);}
+        .box > div:nth-child(3){background: hotpink;}
+        .box > div:nth-child(4){background: green;top: 0;left: 200px;transform-origin: left center;transform: rotateY(90deg);}
+        .box > div:nth-child(5){background: red;top: 200px;left: 0;transform-origin:top center;transform: rotateX(-90deg);}
+        .box > div:nth-child(6){background: greenyellow;transform: translateZ(-200px);}
+        .wrap:hover .box{transform: rotateY(180deg);}
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+    </div>
+</body>
+</html>
